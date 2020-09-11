@@ -67,6 +67,17 @@ public class IplCensusAnalyser {
         List sortedResult = this.sort(censusComparator.reversed());
         return new Gson().toJson(sortedResult);
     }
+    /**
+     * for checking highest 4s
+     * @return
+     * @throws IplAnalyserException
+     */
+    public String getHighest4s() throws IplAnalyserException {
+        this.checkNull();
+        Comparator<IplCensusDao> censusComparator = Comparator.comparing(census -> census.Highest4s);
+        List sortedResult = this.sort(censusComparator.reversed());
+        return new Gson().toJson(sortedResult);
+    }
 
     private List sort(Comparator<IplCensusDao> censusComparator) {
         List sortedResult = censusMap.values().stream().sorted(censusComparator).collect(Collectors.toList());

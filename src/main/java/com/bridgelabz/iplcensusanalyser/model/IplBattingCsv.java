@@ -11,13 +11,17 @@ public class IplBattingCsv {
     public String playerName;
     @CsvBindByName(column = "Avg", required = true)
     public double avg;
+    @CsvBindByName(column = "SR", required = true)
+    public double sr;
 
     @Override
     public String toString() {
         return "IplBattingCsv{" +
                 "slNo=" + slNo +
                 ", playerName='" + playerName + '\'' +
-               ", avg='" + avg + '\'' +
+                ", avg=" + avg +
+                ", sr=" + sr +
                 '}';
     }
 }
+

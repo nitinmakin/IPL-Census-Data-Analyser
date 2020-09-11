@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 
 public class IplCensusAnalyser {
     Map<String, IplCensusDao> censusMap;
-
     public IplCensusAnalyser() {
         this.censusMap = new HashMap<>();
     }
@@ -29,12 +28,27 @@ public class IplCensusAnalyser {
         censusMap =  new LoadIplCensusData().loadCsvData(csvFilePath, IplBowlingCsv.class);
         return censusMap.size();
     }
-
-    public String getBestBattingAvg() throws IplAnalyserException {
+    public void checkNull() throws IplAnalyserException {
         if (censusMap == null || censusMap.size() == 0) {
             throw new IplAnalyserException("NO Census Data", IplAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
+    }
+
+    /**
+     * for checking best batting avg
+     * @return
+     * @throws IplAnalyserException
+     */
+    public String getBestBattingAvg() throws IplAnalyserException {
+        this.checkNull();
         Comparator<IplCensusDao> censusComparator = Comparator.comparing(census -> census.avg);
+        List sortedResult = this.sort(censusComparator.reversed());
+        return new Gson().toJson(sortedResult);
+    }
+
+    public String getBestBattingSR() throws IplAnalyserException {
+        this.checkNull();
+        Comparator<IplCensusDao> censusComparator = Comparator.comparing(census -> census.sr);
         List sortedResult = this.sort(censusComparator.reversed());
         return new Gson().toJson(sortedResult);
     }

@@ -5,15 +5,20 @@ public class IplCensusDao {
     public String playerName;
     public double avg;
     public double sr;
+    public int highest6s;
+    public int Highest4s;
 
     public IplCensusDao(IplBattingCsv iplBattingCsv) {
         slNO = iplBattingCsv.slNo;
         playerName = iplBattingCsv.playerName;
         avg = iplBattingCsv.avg;
         sr = iplBattingCsv.sr;
+        highest6s = iplBattingCsv.highest6s;
+        Highest4s = iplBattingCsv.highest4s;
+
     }
 
-    public IplCensusDao(IplBowlingCsv iplBowlingCsv){
+    public IplCensusDao(IplBowlingCsv iplBowlingCsv) {
         slNO = iplBowlingCsv.slNo;
         playerName = iplBowlingCsv.playerName;
     }

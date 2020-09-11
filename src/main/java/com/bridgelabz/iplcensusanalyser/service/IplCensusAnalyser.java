@@ -45,10 +45,25 @@ public class IplCensusAnalyser {
         List sortedResult = this.sort(censusComparator.reversed());
         return new Gson().toJson(sortedResult);
     }
-
+    /**
+     * for checking best batting SR
+     * @return
+     * @throws IplAnalyserException
+     */
     public String getBestBattingSR() throws IplAnalyserException {
         this.checkNull();
         Comparator<IplCensusDao> censusComparator = Comparator.comparing(census -> census.sr);
+        List sortedResult = this.sort(censusComparator.reversed());
+        return new Gson().toJson(sortedResult);
+    }
+    /**
+     * for checking highest 6s
+     * @return
+     * @throws IplAnalyserException
+     */
+    public String getHighest6s() throws IplAnalyserException {
+        this.checkNull();
+        Comparator<IplCensusDao> censusComparator = Comparator.comparing(census -> census.highest6s);
         List sortedResult = this.sort(censusComparator.reversed());
         return new Gson().toJson(sortedResult);
     }

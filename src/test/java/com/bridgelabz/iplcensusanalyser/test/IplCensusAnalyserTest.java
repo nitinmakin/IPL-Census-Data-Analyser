@@ -62,5 +62,18 @@ public class IplCensusAnalyserTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void givenIplHighest6sDataShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBattingData(IPL_BATTING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getHighest6s();
+            IplBattingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBattingCsv[].class);
+            Assert.assertEquals("Andre Russell", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

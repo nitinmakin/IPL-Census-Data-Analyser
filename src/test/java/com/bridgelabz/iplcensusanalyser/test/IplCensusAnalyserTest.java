@@ -130,5 +130,18 @@ public class IplCensusAnalyserTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void givenIplPlayerWithBestBowlingEconRateShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBowlingData(IPL_BOWLING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInAscending(EnumSort.BEST_BOWL_ECON);
+            IplBowlingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBowlingCsv[].class);
+            Assert.assertEquals("Shivam Dube", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

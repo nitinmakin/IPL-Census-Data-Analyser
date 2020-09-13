@@ -54,6 +54,13 @@ public enum EnumSort {
             Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.sr);
             return IplCensusComparator;
         }
+    },
+    BEST_BOWL_ECON {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.ecNo);
+            return IplCensusComparator;
+        }
     };
     public abstract Comparator<IplCensusDao> sortData();
     }

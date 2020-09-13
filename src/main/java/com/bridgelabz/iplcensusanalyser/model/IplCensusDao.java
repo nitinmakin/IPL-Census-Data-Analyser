@@ -12,6 +12,9 @@ public class IplCensusDao {
     public double highest4W;
     public double highest5W;
     public int wickets;
+    public int max100;
+    public int max50;
+
 
     public IplCensusDao(IplBattingCsv iplBattingCsv) {
         slNO = iplBattingCsv.slNo;
@@ -21,6 +24,8 @@ public class IplCensusDao {
         highest6s = iplBattingCsv.highest6s;
         Highest4s = iplBattingCsv.highest4s;
         runs = iplBattingCsv.runs;
+        max50 = iplBattingCsv.max50;
+        max100 = iplBattingCsv.max100;
     }
 
     public IplCensusDao(IplBowlingCsv iplBowlingCsv) {

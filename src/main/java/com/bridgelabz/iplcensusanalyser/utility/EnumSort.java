@@ -81,8 +81,21 @@ public enum EnumSort {
     HIGHEST_WICKETS {
         @Override
         public Comparator<IplCensusDao> sortData() {
-            Comparator<IplCensusDao> IplCensusComparator = Comparator.
-                    comparing(census -> census.wickets);
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.wickets);
+            return IplCensusComparator;
+        }
+    },
+    MAX100 {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.max100);
+            return IplCensusComparator;
+        }
+    },
+    MAX50 {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.max50);
             return IplCensusComparator;
         }
     };

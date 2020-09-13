@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-13T21:11:39" hostname="DESKTOP-96O27FC" time="0.631">
+<testsuite name="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-13T22:26:44" hostname="DESKTOP-96O27FC" time="0.597">
   <properties/>
-  <testcase name="givenIplPlayerWithHighestWicketsShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.631"/>
-  <system-out><![CDATA[IplBowlingCsv{slNo=0, playerName='Imran Tahir', avg=16.57, sr=14.84, ecNo=6.69, highest4W=2.0, highest5W=0.0, wickets=26}
+  <testcase name="givenIplPlayerWithMax50ShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.597"/>
+  <system-out><![CDATA[IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

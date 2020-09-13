@@ -21,13 +21,13 @@ public class IplCensusAnalyser {
     }
 
 
-    public int LoadIplBattingData(String csvFilePath) throws IplAnalyserException {
-        censusMap = new LoadIplCensusData().loadCsvData(csvFilePath, IplBattingCsv.class);
+    public int LoadIplBattingData(String... csvFilePath) throws IplAnalyserException {
+        censusMap = new LoadIplCensusData().loadCsvData(IplBattingCsv.class, csvFilePath);
         return censusMap.size();
     }
 
-    public int LoadIplBowlingData(String csvFilePath) throws IplAnalyserException {
-        censusMap = new LoadIplCensusData().loadCsvData(csvFilePath, IplBowlingCsv.class);
+    public int LoadIplBowlingData(String... csvFilePath) throws IplAnalyserException {
+        censusMap = new LoadIplCensusData().loadCsvData(IplBowlingCsv.class, csvFilePath );
         return censusMap.size();
     }
 

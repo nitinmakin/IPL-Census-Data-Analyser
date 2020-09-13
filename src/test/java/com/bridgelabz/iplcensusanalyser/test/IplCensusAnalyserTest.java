@@ -183,5 +183,31 @@ public class IplCensusAnalyserTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void givenIplPlayerWithMax100ShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBattingData(IPL_BATTING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInDescending(EnumSort.MAX100);
+            IplBattingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBattingCsv[].class);
+            Assert.assertEquals("David Warner ", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void givenIplPlayerWithMax50ShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBattingData(IPL_BATTING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInDescending(EnumSort.MAX50);
+            IplBattingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBattingCsv[].class);
+            Assert.assertEquals("David Warner ", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

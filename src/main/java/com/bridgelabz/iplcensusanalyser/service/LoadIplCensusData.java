@@ -17,10 +17,10 @@ import java.util.stream.StreamSupport;
 
 public class LoadIplCensusData {
 
-    public <E> Map loadCsvData(String csvFilePath, Class<E> IplCensusCsvData) throws IplAnalyserException {
+    public <E> Map loadCsvData(Class<E> IplCensusCsvData, String... csvFilePath) throws IplAnalyserException {
         Map<String, IplCensusDao> censusMap = new HashMap<>();
 
-        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath[0]))) {
             ICsvBuilder csvBuilder = CsvBuilderFactory.createCsvBuilder();
             Iterator<E> csvFileIterator = csvBuilder.getCSVFileIterator(reader, IplCensusCsvData);
             Iterable<E> CensusCsv = () -> csvFileIterator;

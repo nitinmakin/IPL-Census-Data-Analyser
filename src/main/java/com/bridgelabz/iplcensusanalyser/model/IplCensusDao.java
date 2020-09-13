@@ -7,6 +7,7 @@ public class IplCensusDao {
     public double sr;
     public int highest6s;
     public int Highest4s;
+    public int runs;
 
     public IplCensusDao(IplBattingCsv iplBattingCsv) {
         slNO = iplBattingCsv.slNo;
@@ -15,6 +16,7 @@ public class IplCensusDao {
         sr = iplBattingCsv.sr;
         highest6s = iplBattingCsv.highest6s;
         Highest4s = iplBattingCsv.highest4s;
+        runs = iplBattingCsv.runs;
 
     }
 

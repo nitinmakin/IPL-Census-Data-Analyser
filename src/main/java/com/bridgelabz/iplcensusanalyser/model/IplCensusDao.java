@@ -23,5 +23,6 @@ public class IplCensusDao {
         slNO = iplBowlingCsv.slNo;
         playerName = iplBowlingCsv.playerName;
         avg = iplBowlingCsv.avg;
+        sr = iplBowlingCsv.sr;
     }
 }

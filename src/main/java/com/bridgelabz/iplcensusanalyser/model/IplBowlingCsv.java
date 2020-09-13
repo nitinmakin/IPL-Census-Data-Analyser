@@ -9,6 +9,8 @@ public class IplBowlingCsv {
     public String playerName;
     @CsvBindByName(column =  "Avg", required = true)
     public double avg;
+    @CsvBindByName(column =  "SR", required = true)
+    public double sr;
 
     @Override
     public String toString() {
@@ -16,6 +18,7 @@ public class IplBowlingCsv {
                 "slNo=" + slNo +
                 ", playerName='" + playerName + '\'' +
                 ", avg=" + avg +
+                ", sr=" + sr +
                 '}';
     }
 }

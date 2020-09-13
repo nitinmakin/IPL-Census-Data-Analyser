@@ -47,6 +47,13 @@ public enum EnumSort {
             Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.avg);
             return IplCensusComparator;
         }
+    },
+    BEST_BOWL_SR {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.sr);
+            return IplCensusComparator;
+        }
     };
     public abstract Comparator<IplCensusDao> sortData();
     }

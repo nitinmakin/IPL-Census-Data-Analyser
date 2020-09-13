@@ -77,6 +77,14 @@ public enum EnumSort {
                     comparing(census -> (census.sr + census.avg));
             return IplCensusComparator;
         }
+    },
+    HIGHEST_WICKETS {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.
+                    comparing(census -> census.wickets);
+            return IplCensusComparator;
+        }
     };
 
     public abstract Comparator<IplCensusDao> sortData();

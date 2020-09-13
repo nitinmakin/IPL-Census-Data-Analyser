@@ -17,6 +17,8 @@ public class IplBowlingCsv {
     public double highest4W;
     @CsvBindByName(column =  "5w", required = true)
     public double highest5W;
+    @CsvBindByName(column =  "Wkts", required = true)
+    public int wickets;
 
     @Override
     public String toString() {
@@ -28,6 +30,7 @@ public class IplBowlingCsv {
                 ", ecNo=" + ecNo +
                 ", highest4W=" + highest4W +
                 ", highest5W=" + highest5W +
+                ", wickets=" + wickets +
                 '}';
     }
 }

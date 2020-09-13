@@ -17,11 +17,11 @@ public class IplCensusDao {
         highest6s = iplBattingCsv.highest6s;
         Highest4s = iplBattingCsv.highest4s;
         runs = iplBattingCsv.runs;
-
     }
 
     public IplCensusDao(IplBowlingCsv iplBowlingCsv) {
         slNO = iplBowlingCsv.slNo;
         playerName = iplBowlingCsv.playerName;
+        avg = iplBowlingCsv.avg;
     }
 }

@@ -15,18 +15,19 @@ import java.util.stream.Collectors;
 
 public class IplCensusAnalyser {
     Map<String, IplCensusDao> censusMap;
+
     public IplCensusAnalyser() {
         this.censusMap = new HashMap<>();
     }
 
 
     public int LoadIplBattingData(String csvFilePath) throws IplAnalyserException {
-        censusMap =  new LoadIplCensusData().loadCsvData(csvFilePath, IplBattingCsv.class);
+        censusMap = new LoadIplCensusData().loadCsvData(csvFilePath, IplBattingCsv.class);
         return censusMap.size();
     }
 
     public int LoadIplBowlingData(String csvFilePath) throws IplAnalyserException {
-        censusMap =  new LoadIplCensusData().loadCsvData(csvFilePath, IplBowlingCsv.class);
+        censusMap = new LoadIplCensusData().loadCsvData(csvFilePath, IplBowlingCsv.class);
         return censusMap.size();
     }
 
@@ -38,6 +39,7 @@ public class IplCensusAnalyser {
         List sortedResult = this.sort(censusComparator);
         return new Gson().toJson(sortedResult);
     }
+
     public String getIplSortingDataInDescending(EnumSort sortVariable) throws IplAnalyserException {
         if (censusMap == null || censusMap.size() == 0) {
             throw new IplAnalyserException("NO Census Data", IplAnalyserException.ExceptionType.NO_CENSUS_DATA);
@@ -46,7 +48,6 @@ public class IplCensusAnalyser {
         List sortedResult = this.sort(censusComparator.reversed());
         return new Gson().toJson(sortedResult);
     }
-
 
 
     private List sort(Comparator<IplCensusDao> censusComparator) {

@@ -2,6 +2,7 @@ package com.bridgelabz.iplcensusanalyser.test;
 
 import com.bridgelabz.iplcensusanalyser.exception.IplAnalyserException;
 import com.bridgelabz.iplcensusanalyser.model.IplBattingCsv;
+import com.bridgelabz.iplcensusanalyser.model.IplBowlingCsv;
 import com.bridgelabz.iplcensusanalyser.service.IplCensusAnalyser;
 import com.bridgelabz.iplcensusanalyser.utility.EnumSort;
 import com.google.gson.Gson;
@@ -98,6 +99,19 @@ public class IplCensusAnalyserTest {
             String sortedCensusData = iplCensusAnalyser.getIplSortingDataInDescending(EnumSort.TOP_RUNS_OF_PLAYER);
             IplBattingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBattingCsv[].class);
             Assert.assertEquals("David Warner ", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void givenIplPlayerWithBestBowlingAvgShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBowlingData(IPL_BOWLING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInAscending(EnumSort.BEST_BOWL_AVG);
+            IplBowlingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBowlingCsv[].class);
+            Assert.assertEquals("Anukul Roy", censusCsv[0].playerName);
             System.out.println(censusCsv[0]);
         } catch (IplAnalyserException e) {
             e.printStackTrace();

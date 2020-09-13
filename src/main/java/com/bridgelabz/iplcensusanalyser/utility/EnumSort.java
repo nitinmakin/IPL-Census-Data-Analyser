@@ -69,6 +69,14 @@ public enum EnumSort {
                     comparing(census -> (census.highest5W + census.highest4W));
             return IplCensusComparator;
         }
+    },
+    BEST_BOWL_AVG_AND_BEST_SR {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.
+                    comparing(census -> (census.sr + census.avg));
+            return IplCensusComparator;
+        }
     };
 
     public abstract Comparator<IplCensusDao> sortData();

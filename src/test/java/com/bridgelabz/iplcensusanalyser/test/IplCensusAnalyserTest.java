@@ -157,4 +157,18 @@ public class IplCensusAnalyserTest {
         }
     }
 
+    @Test
+    public void givenIplPlayerWithBest_BowlAvg_BowlSr_EconRateShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBowlingData(IPL_BOWLING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInAscending(EnumSort.BEST_BOWL_AVG_AND_BEST_SR);
+            IplBowlingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBowlingCsv[].class);
+            Assert.assertEquals("Anukul Roy", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

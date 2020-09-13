@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-09-11T22:10:15" hostname="DESKTOP-96O27FC" time="0.588">
+<testsuite name="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-09-13T17:43:50" hostname="DESKTOP-96O27FC" time="0.636">
   <properties/>
-  <testcase name="givenIplHighest4sDataShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.588">
-    <failure message="org.junit.ComparisonFailure: expected:&lt;[Andre Russell]&gt; but was:&lt;[Shikhar Dhawan]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[Andre Russell]&gt; but was:&lt;[Shikhar Dhawan]&gt;
+  <testcase name="givenIplBestAvgWithBestSrShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.636">
+    <failure message="org.junit.ComparisonFailure: expected:&lt;Andre Russ[]l&gt; but was:&lt;Andre Russ[el]l&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;Andre Russ[]l&gt; but was:&lt;Andre Russ[el]l&gt;
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest.givenIplHighest4sDataShouldReturnCorrectResult(IplCensusAnalyserTest.java:85)
+	at com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest.givenIplBestAvgWithBestSrShouldReturnCorrectResult(IplCensusAnalyserTest.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

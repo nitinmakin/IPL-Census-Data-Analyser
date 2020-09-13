@@ -1,1 +1,15 @@
-ÄIplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+~IplBowlingCsv{slNo=0, playerName='Lasith Malinga', avg=27.37, sr=16.81, ecNo=9.76, highest4W=2.0, highest5W=0.0, wickets=16}
+ÇIplBattingCsv{slNo=0, playerName='Marcus Stoinis', avg=52.75, sr=135.25, highest6s=10, highest4s=0, runs=211, max100=0, max50=0}
+vIplBowlingCsv{slNo=0, playerName='Anukul Roy', avg=11.0, sr=12.0, ecNo=5.5, highest4W=0.0, highest5W=0.0, wickets=1}
+ÄIplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+vIplBowlingCsv{slNo=0, playerName='Anukul Roy', avg=11.0, sr=12.0, ecNo=5.5, highest4W=0.0, highest5W=0.0, wickets=1}
+ÅIplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+	|IplBowlingCsv{slNo=0, playerName='Shivam Dube', avg=1110.0, sr=10000.0, ecNo=4.8, highest4W=0.0, highest5W=0.0, wickets=0}
+
+ÅIplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+ÅIplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+ÄIplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+|IplBowlingCsv{slNo=0, playerName='Alzarri Joseph', avg=14.5, sr=8.66, ecNo=10.03, highest4W=0.0, highest5W=1.0, wickets=6}
+{IplBowlingCsv{slNo=0, playerName='Imran Tahir', avg=16.57, sr=14.84, ecNo=6.69, highest4W=2.0, highest5W=0.0, wickets=26}
+ÄIplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+{IplBattingCsv{slNo=0, playerName='MS Dhoni', avg=83.2, sr=134.62, highest6s=23, highest4s=0, runs=416, max100=0, max50=3}

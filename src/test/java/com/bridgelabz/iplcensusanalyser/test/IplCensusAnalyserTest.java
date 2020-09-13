@@ -209,5 +209,18 @@ public class IplCensusAnalyserTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void givenIplPlayerWithZero50sAndZero100sShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBattingData(IPL_BATTING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInAscending(EnumSort.ZERO50s_ZERO100s);
+            IplBattingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBattingCsv[].class);
+            Assert.assertEquals("Marcus Stoinis", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

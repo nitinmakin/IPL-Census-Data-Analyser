@@ -98,6 +98,14 @@ public enum EnumSort {
             Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.max50);
             return IplCensusComparator;
         }
+    },
+    ZERO50s_ZERO100s {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator
+                    .comparing(census -> (census.max50 + census.max100));
+            return IplCensusComparator;
+        }
     };
 
     public abstract Comparator<IplCensusDao> sortData();

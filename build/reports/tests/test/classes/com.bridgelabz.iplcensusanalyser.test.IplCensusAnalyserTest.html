@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">16</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.597s</div>
+<div class="counter">3.965s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,83 @@
 </tr>
 </thead>
 <tr>
+<td class="success">IplBattingDataShouldReturnCorrectRecords</td>
+<td class="success">0.302s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">IplBowlingDataShouldReturnCorrectRecords</td>
+<td class="success">0.157s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplBestAvgWithBestSrShouldReturnCorrectResult</td>
+<td class="success">0.240s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplBestBattingAvgDataShouldReturnCorrectResult</td>
+<td class="success">0.160s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplBestBattingSRDataShouldReturnCorrectResult</td>
+<td class="success">0.283s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplHighestBoundariesDataShouldReturnCorrectResult</td>
+<td class="success">0.223s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithBestBowlingAvgShouldReturnCorrectResult</td>
+<td class="success">0.200s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithBestBowlingEconRateShouldReturnCorrectResult</td>
+<td class="success">0.353s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithBestBowlingSRShouldReturnCorrectResult</td>
+<td class="success">0.165s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithBestRunsShouldReturnCorrectResult</td>
+<td class="success">0.182s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithBest_4W_5W_EconRateShouldReturnCorrectResult</td>
+<td class="success">0.638s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithBest_BowlAvg_BowlSr_EconRateShouldReturnCorrectResult</td>
+<td class="success">0.198s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithHighestWicketsShouldReturnCorrectResult</td>
+<td class="success">0.141s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithMax100ShouldReturnCorrectResult</td>
+<td class="success">0.160s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">givenIplPlayerWithMax50ShouldReturnCorrectResult</td>
-<td class="success">0.597s</td>
+<td class="success">0.224s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenIplPlayerWithZero50sAndZero100sShouldReturnCorrectResult</td>
+<td class="success">0.339s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,7 +162,20 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+<pre>IplBowlingCsv{slNo=0, playerName='Lasith Malinga', avg=27.37, sr=16.81, ecNo=9.76, highest4W=2.0, highest5W=0.0, wickets=16}
+IplBattingCsv{slNo=0, playerName='Marcus Stoinis', avg=52.75, sr=135.25, highest6s=10, highest4s=0, runs=211, max100=0, max50=0}
+IplBowlingCsv{slNo=0, playerName='Anukul Roy', avg=11.0, sr=12.0, ecNo=5.5, highest4W=0.0, highest5W=0.0, wickets=1}
+IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+IplBowlingCsv{slNo=0, playerName='Anukul Roy', avg=11.0, sr=12.0, ecNo=5.5, highest4W=0.0, highest5W=0.0, wickets=1}
+IplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+IplBowlingCsv{slNo=0, playerName='Shivam Dube', avg=1110.0, sr=10000.0, ecNo=4.8, highest4W=0.0, highest5W=0.0, wickets=0}
+IplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+IplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+IplBowlingCsv{slNo=0, playerName='Alzarri Joseph', avg=14.5, sr=8.66, ecNo=10.03, highest4W=0.0, highest5W=1.0, wickets=6}
+IplBowlingCsv{slNo=0, playerName='Imran Tahir', avg=16.57, sr=14.84, ecNo=6.69, highest4W=2.0, highest5W=0.0, wickets=26}
+IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+IplBattingCsv{slNo=0, playerName='MS Dhoni', avg=83.2, sr=134.62, highest6s=23, highest4s=0, runs=416, max100=0, max50=3}
 </pre>
 </span>
 </div>
@@ -99,7 +187,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1.1</a> at 14 Sep, 2020 3:56:44 AM</p>
+<a href="http://www.gradle.org">Gradle 6.1.1</a> at 14 Sep, 2020 4:15:15 AM</p>
 </div>
 </div>
 </body>

@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-13T22:26:44" hostname="DESKTOP-96O27FC" time="0.597">
+<testsuite name="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-09-13T22:45:10" hostname="DESKTOP-96O27FC" time="3.986">
   <properties/>
-  <testcase name="givenIplPlayerWithMax50ShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.597"/>
-  <system-out><![CDATA[IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+  <testcase name="givenIplPlayerWithBest_4W_5W_EconRateShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.638"/>
+  <testcase name="IplBattingDataShouldReturnCorrectRecords" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.302"/>
+  <testcase name="givenIplPlayerWithZero50sAndZero100sShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.339"/>
+  <testcase name="givenIplPlayerWithBestBowlingAvgShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.2"/>
+  <testcase name="givenIplPlayerWithMax50ShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.224"/>
+  <testcase name="givenIplPlayerWithBest_BowlAvg_BowlSr_EconRateShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.198"/>
+  <testcase name="givenIplBestBattingSRDataShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.283"/>
+  <testcase name="givenIplPlayerWithBestBowlingEconRateShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.353"/>
+  <testcase name="givenIplBestAvgWithBestSrShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.24"/>
+  <testcase name="givenIplHighestBoundariesDataShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.223"/>
+  <testcase name="givenIplPlayerWithMax100ShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.16"/>
+  <testcase name="givenIplPlayerWithBestBowlingSRShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.165"/>
+  <testcase name="givenIplPlayerWithHighestWicketsShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.141"/>
+  <testcase name="givenIplPlayerWithBestRunsShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.182"/>
+  <testcase name="IplBowlingDataShouldReturnCorrectRecords" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.157"/>
+  <testcase name="givenIplBestBattingAvgDataShouldReturnCorrectResult" classname="com.bridgelabz.iplcensusanalyser.test.IplCensusAnalyserTest" time="0.16"/>
+  <system-out><![CDATA[IplBowlingCsv{slNo=0, playerName='Lasith Malinga', avg=27.37, sr=16.81, ecNo=9.76, highest4W=2.0, highest5W=0.0, wickets=16}
+IplBattingCsv{slNo=0, playerName='Marcus Stoinis', avg=52.75, sr=135.25, highest6s=10, highest4s=0, runs=211, max100=0, max50=0}
+IplBowlingCsv{slNo=0, playerName='Anukul Roy', avg=11.0, sr=12.0, ecNo=5.5, highest4W=0.0, highest5W=0.0, wickets=1}
+IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+IplBowlingCsv{slNo=0, playerName='Anukul Roy', avg=11.0, sr=12.0, ecNo=5.5, highest4W=0.0, highest5W=0.0, wickets=1}
+IplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+IplBowlingCsv{slNo=0, playerName='Shivam Dube', avg=1110.0, sr=10000.0, ecNo=4.8, highest4W=0.0, highest5W=0.0, wickets=0}
+IplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+IplBattingCsv{slNo=0, playerName='Andre Russell', avg=56.66, sr=204.81, highest6s=52, highest4s=0, runs=510, max100=0, max50=4}
+IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+IplBowlingCsv{slNo=0, playerName='Alzarri Joseph', avg=14.5, sr=8.66, ecNo=10.03, highest4W=0.0, highest5W=1.0, wickets=6}
+IplBowlingCsv{slNo=0, playerName='Imran Tahir', avg=16.57, sr=14.84, ecNo=6.69, highest4W=2.0, highest5W=0.0, wickets=26}
+IplBattingCsv{slNo=0, playerName='David Warner ', avg=69.2, sr=143.86, highest6s=21, highest4s=0, runs=692, max100=1, max50=8}
+IplBattingCsv{slNo=0, playerName='MS Dhoni', avg=83.2, sr=134.62, highest6s=23, highest4s=0, runs=416, max100=0, max50=3}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

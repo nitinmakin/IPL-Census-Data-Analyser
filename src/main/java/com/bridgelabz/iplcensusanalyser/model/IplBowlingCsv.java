@@ -13,6 +13,10 @@ public class IplBowlingCsv {
     public double sr;
     @CsvBindByName(column =  "Econ", required = true)
     public double ecNo;
+    @CsvBindByName(column =  "4w", required = true)
+    public double highest4W;
+    @CsvBindByName(column =  "5w", required = true)
+    public double highest5W;
 
     @Override
     public String toString() {
@@ -21,7 +25,9 @@ public class IplBowlingCsv {
                 ", playerName='" + playerName + '\'' +
                 ", avg=" + avg +
                 ", sr=" + sr +
-                ", Econ=" + ecNo +
+                ", ecNo=" + ecNo +
+                ", highest4W=" + highest4W +
+                ", highest5W=" + highest5W +
                 '}';
     }
 }

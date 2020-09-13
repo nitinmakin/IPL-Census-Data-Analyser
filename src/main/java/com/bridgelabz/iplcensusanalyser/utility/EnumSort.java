@@ -61,6 +61,15 @@ public enum EnumSort {
             Comparator<IplCensusDao> IplCensusComparator = Comparator.comparing(census -> census.ecNo);
             return IplCensusComparator;
         }
+    },
+    BEST_BOWL_4W_5W {
+        @Override
+        public Comparator<IplCensusDao> sortData() {
+            Comparator<IplCensusDao> IplCensusComparator = Comparator.
+                    comparing(census -> (census.highest5W + census.highest4W));
+            return IplCensusComparator;
+        }
     };
+
     public abstract Comparator<IplCensusDao> sortData();
-    }
+}

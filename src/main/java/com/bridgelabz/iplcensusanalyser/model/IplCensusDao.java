@@ -9,6 +9,8 @@ public class IplCensusDao {
     public int Highest4s;
     public int runs;
     public double ecNo;
+    public double highest4W;
+    public double highest5W;
 
     public IplCensusDao(IplBattingCsv iplBattingCsv) {
         slNO = iplBattingCsv.slNo;
@@ -26,5 +28,7 @@ public class IplCensusDao {
         avg = iplBowlingCsv.avg;
         sr = iplBowlingCsv.sr;
         ecNo = iplBowlingCsv.ecNo;
+        highest4W = iplBowlingCsv.highest4W;
+        highest5W = iplBowlingCsv.highest5W;
     }
 }

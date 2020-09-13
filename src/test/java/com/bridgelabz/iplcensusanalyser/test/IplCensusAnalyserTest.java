@@ -143,5 +143,18 @@ public class IplCensusAnalyserTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void givenIplPlayerWithBest_4W_5W_EconRateShouldReturnCorrectResult() {
+        try {
+            IplCensusAnalyser iplCensusAnalyser = new IplCensusAnalyser();
+            iplCensusAnalyser.LoadIplBowlingData(IPL_BOWLING_FILE_PATH);
+            String sortedCensusData = iplCensusAnalyser.getIplSortingDataInDescending(EnumSort.BEST_BOWL_4W_5W);
+            IplBowlingCsv censusCsv[] = new Gson().fromJson(sortedCensusData, IplBowlingCsv[].class);
+            Assert.assertEquals("Lasith Malinga", censusCsv[0].playerName);
+            System.out.println(censusCsv[0]);
+        } catch (IplAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

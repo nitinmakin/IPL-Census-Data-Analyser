@@ -17,6 +17,18 @@ import java.util.stream.StreamSupport;
 
 public class LoadIplCensusData {
 
+    public Map<String, IplCensusDao> loadCsvData(IplCensusAnalyser.IPL ipl,
+                                                 String csvFilePath) throws IplAnalyserException {
+
+        if(ipl.equals(IplCensusAnalyser.IPL.BATTING_DATA))
+            return loadCsvData(IplBattingCsv.class, csvFilePath);
+        else if(ipl.equals(IplCensusAnalyser.IPL.BOWLING_DATA))
+            return loadCsvData(IplBowlingCsv.class, csvFilePath);
+        else
+           return null;
+    }
+
+
     public <E> Map loadCsvData(Class<E> IplCensusCsvData, String... csvFilePath) throws IplAnalyserException {
         Map<String, IplCensusDao> censusMap = new HashMap<>();
 

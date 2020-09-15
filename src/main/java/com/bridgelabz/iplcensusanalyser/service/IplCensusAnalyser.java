@@ -16,68 +16,41 @@ import java.util.stream.Collectors;
 public class IplCensusAnalyser {
     Map<String, IplCensusDao> censusMap;
 
+    public enum IPL {
+        BATTING_DATA,BOWLING_DATA
+    }
+
     public IplCensusAnalyser() {
         this.censusMap = new HashMap<>();
     }
 
     /**
-     * to load Ipl batting data
+     * load Ipl data
      * @param csvFilePath
      * @return
      * @throws IplAnalyserException
      */
-    public int LoadIplBattingData(String... csvFilePath) throws IplAnalyserException {
-        censusMap = new LoadIplCensusData().loadCsvData(IplBattingCsv.class, csvFilePath);
-        return censusMap.size();
-    }
-    /**
-     * to load Ipl bowling data
-     * @param csvFilePath
-     * @return
-     * @throws IplAnalyserException
-     */
-    public int LoadIplBowlingData(String... csvFilePath) throws IplAnalyserException {
-        censusMap = new LoadIplCensusData().loadCsvData(IplBowlingCsv.class, csvFilePath );
+    public int LoadIplData(IPL ipl, String csvFilePath) throws IplAnalyserException {
+        censusMap = new LoadIplCensusData().loadCsvData(ipl, csvFilePath);
         return censusMap.size();
     }
 
+
     /**
-     * to sort ipl data in ascending order
+     *  sort IPL data
      * @param sortVariable
      * @return
      * @throws IplAnalyserException
      */
-    public String getIplSortingDataInAscending(EnumSort sortVariable) throws IplAnalyserException {
+    public String getIplSortedData(EnumSort sortVariable) throws IplAnalyserException {
         if (censusMap == null || censusMap.size() == 0) {
             throw new IplAnalyserException("NO Census Data", IplAnalyserException.ExceptionType.NO_CENSUS_DATA);
         }
-        Comparator<IplCensusDao> censusComparator = sortVariable.sortData();
-        List sortedResult = this.sort(censusComparator);
-        return new Gson().toJson(sortedResult);
-    }
-
-    /**
-     * to sort ipl data in Descending order
-     * @param sortVariable
-     * @return
-     * @throws IplAnalyserException
-     */
-    public String getIplSortingDataInDescending(EnumSort sortVariable) throws IplAnalyserException {
-        if (censusMap == null || censusMap.size() == 0) {
-            throw new IplAnalyserException("NO Census Data", IplAnalyserException.ExceptionType.NO_CENSUS_DATA);
-        }
-        Comparator<IplCensusDao> censusComparator = sortVariable.sortData();
-        List sortedResult = this.sort(censusComparator.reversed());
-        return new Gson().toJson(sortedResult);
-    }
-
-    /**
-     * sorting method to sort Ipl census data
-     * @param censusComparator
-     * @return
-     */
-    private List sort(Comparator<IplCensusDao> censusComparator) {
+        ComparatorSort comparatorSort = new ComparatorSort();
+        Comparator<IplCensusDao> censusComparator = comparatorSort.sortData(sortVariable);
         List sortedResult = censusMap.values().stream().sorted(censusComparator).collect(Collectors.toList());
-        return sortedResult;
+        return new Gson().toJson(sortedResult);
     }
+
+
 }
